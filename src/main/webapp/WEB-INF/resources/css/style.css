@@ -1,0 +1,290 @@
+
+body{
+    font-size: 15px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+    background: #E1E3E2
+}
+.wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.main {
+
+}
+.tab-pane .row {
+    margin: 0
+}
+/* Links
+==========================*/
+a{
+    
+}
+a, a:hover, a:focus{
+    text-decoration: none;
+}
+/* Headings 
+========================== */
+h1, h2, h3, h4, h5, h6 {
+    display: block;
+    margin: 20px 0;
+    text-align: center;
+}
+p{
+    margin: 0;
+}
+/*Lists
+==========================*/
+ul {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Images
+=========================== */
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+/* Header 
+======================*/
+ul.header{
+    position: absolute;
+    height: 100vh;
+    background: #FFF;
+    width: 200px;
+    border-right: 2px solid #F8F8F8;
+    left: -200px;
+    transition: all 0.3s ease-in-out
+}
+ul.header.active{
+    left: 0
+}
+ul.header{
+    
+}
+ul.header li{
+    border-bottom: 2px solid #F8F8F8;
+    position: relative;
+    z-index: 0;
+    cursor: pointer
+}
+
+ul.header li:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #30B59A;
+    transition: all 0.3s ease-in-out;
+    z-index: -1
+}
+
+ul.header li a{
+    display: block;
+    padding: 20px 10px;
+    color: #7D7D7D
+}
+ul.header li a i {
+    transition: all 0.1s ease-in-out;
+    margin-right: 20px;
+    font-size: 0;
+}
+ul.header li a img{
+    
+}
+/* hover */
+ul.header li.active a,
+ul.header li:hover a{
+    color: #FFF;
+    transition: all 0.3s ease-in-out;
+}
+ul.header li.active a i,
+ul.header li:hover a i {
+    font-size: 15px
+}
+ul.header li.active:after,
+ul.header li:hover:after{
+    width: 100%
+}
+/* tab-content
+=====================*/
+.move {
+    margin-left:  250px;
+/*    width: calc(100% - 25px);*/
+    transition: all 0.3s ease-in-out;
+    margin-right: 15px
+}
+.move.active {
+    margin-left: 20px
+}
+.tab-content i {
+    font-size: 23px;
+    color: #5D5D5D;
+    padding: 20px 0;
+    cursor: pointer
+}
+/* security
+======================= */
+
+.security{
+    text-align: center
+}
+.security li {
+    display: inline-block
+}
+.security li a {
+    padding: 20px 150px;
+    background: #FFF;
+    display: inline-block;
+    border-top: 5px solid transparent;
+    transition: all 0.3s ease-in-out;
+    color: #5D5D5D
+}
+.security li.active a{
+    border-top: 5px solid #30B59A
+}
+.content {
+    background: #FFF;
+    border-radius: 10px;
+    padding: 20px
+}
+/* Form
+==================*/
+
+.group{ 
+    position:relative; 
+    margin:45px 0; 
+}
+input{
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    border:none;
+    width: 100%;
+    border-bottom:1px solid #757575;
+}
+input:focus{ outline:none; }
+
+/* LABEL
+======================================= */
+label{
+    color:#999; 
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label{
+    top:-20px;
+    font-size:14px;
+    color:#30B59A;
+}
+input:invalid{
+    box-shadow: none
+}
+
+input:invalid ~ .bar:before, input:invalid ~ .bar:after
+/* BOTTOM BARS
+================================= */
+.bar{ position:relative; display:block;  }
+.bar:before, .bar:after{
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:0px; 
+    position:absolute;
+    background:#30B59A; 
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+}
+.bar:before {
+    left:50%;
+}
+.bar:after {
+    right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+}
+input:invalid ~ .bar:before,
+input:invalid ~ .bar:after{
+    background:#F00;
+    border:none;
+}
+/* btn
+======================= */
+.btn{
+    border:none;
+    color: #FFF;
+    background: #30B59A;
+    padding: 10px 50px;
+    text-align: center;
+    display: block;
+    margin: auto;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 50px
+}
+.btn i {
+    font-size: 20px;
+    padding: 0 0 0 20px;
+    color: #FFF
+}
+.btn:hover{
+    color: #FFF;
+    box-shadow:  6px 5px 12px rgba(0,0,0,0.3)
+}
+
+/* martix
+===================== */
+.matrix {
+    position: relative;
+}
+.matrix:before, .matrix:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    border: 1px solid #000;
+    width: 6px;
+    height: 100%;
+}
+.matrix   {
+    margin: 0 20px;
+    display: inline-block;
+}
+.matrix   .group {
+    margin: 5px;
+    display: inline-block;
+}
+.matrix   input{
+    width: 50px;
+    text-align: center;
+    border:1px solid #757575;
+}
+.matrix:before {
+    left: -6px;
+    border-right: 0;
+}
+.matrix:after {
+    right: -6px;
+    border-left: 0;
+}
